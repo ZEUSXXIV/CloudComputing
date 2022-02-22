@@ -13,3 +13,6 @@ git add .
 git commit -m "omment"
 heroku apps:create appname
 git push heroku master
+
+git config --global user.name ""
+git config --global user.email ""
