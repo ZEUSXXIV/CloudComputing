@@ -1,0 +1,23 @@
+$con= mysqli_connect('dbhost','dbuser','dbpass');
+mysqli_select_db($con,'dbname');
+
+$var="select * from table";
+$result = mysqli_query($con,$var);
+
+$row=mysqli_fetch_assoc($result)
+
+if(mysqli_num_rows($result)>0){
+while($row=mysqli_fetch_assoc($result)){
+echo "name:".$row["column name"];
+}}
+else
+echo "no result";
+
+<form >ation="index.php" method="post">
+<lable>name</lable>
+<input type="text" name="user" required>
+
+
+$NAME=$_post['user'];
+
+header('location: page.html');
