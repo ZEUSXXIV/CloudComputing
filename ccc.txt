@@ -1,0 +1,15 @@
+aws
+sudo su
+yum update -y
+yum install httpd -y
+chlconfig htttpd on
+cd /var/www/html
+aws s3 sync s3://bucketname /var/www/html
+service httpd start
+
+heroku login
+git init
+git add .
+git commit -m "omment"
+heroku apps:create appname
+git push heroku master
